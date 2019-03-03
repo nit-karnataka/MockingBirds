@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login/Registration</title>
+
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel="stylesheet" href="{%static 'css/style.css' %}">
+
+</head>
+<body>
+<div class="cont">
+  <div class="form sign-in">
+    <h2>Welcome back</h2>
+
+    <form action="{% url 'admin_app:admin_login_view' %}" method="post">
+      {% csrf_token %}
+      {{ form1.non_field_errors }}
+      <label>
+        <span>Email</span>
+        {{ form1.email.errors }}
+        {{ form1.email}}
+      </label>
+      <label>
+        <span>Password</span>
+          {{ form1.password.errors }}
+          {{ form1.password}}
+      </label>
+      <p class="forgot-pass">Forgot password?</p>
+      <input type="submit" class="submit" value="SignIn">
+    </form>
+
+
+  </div>
+  <div class="sub-cont">
+    <div class="img">
+      <div class="img__text m--up">
+        <h2>New here?</h2>
+        <p>Sign up and discover great amount of new opportunities!</p>
+      </div>
+      <div class="img__text m--in">
+        <h2>Already a member?</h2>
+        <p>If you already has an account, just sign in.</p>
+      </div>
+      <div class="img__btn">
+        <span class="m--up">Sign Up</span>
+        <span class="m--in">Sign In</span>
+      </div>
+    </div>
+    <div class="form sign-up">
+      <h2>Create an Account</h2>
+
+
+      <form action="{% url 'admin_app:admin_signup_view' %}" method="post">
+        {% csrf_token %}
+        {{ form2.non_field_errors }}
+            <label>
+              <span>Name</span>
+              {{ form2.name.errors }}
+              {{ form2.name}}
+            </label>
+            <label>
+              <span>Email</span>
+              {{ form2.email.errors }}
+              {{ form2.email}}
+            </label>
+            <label>
+              <span>Password</span>
+              {{ form2.password.errors }}
+              {{ form2.password}}
+            </label>
+            <input type="submit" class="submit" value="Sign Up">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<script  src="{%static 'js/index.js' %}"></script>
+
+</body>
+</html>

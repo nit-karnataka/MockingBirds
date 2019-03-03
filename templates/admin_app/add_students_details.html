@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Add student details</title>
+
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel="stylesheet" href="{%static 'css/add_students_details.css' %}">
+
+</head>
+<body>
+  <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6   col-div text-center">
+    <a href="{% url 'admin_app:admin_dashboard_view' %}" class="btn1 btn_admin">Admin Dashboard</a>
+  </div>
+
+  <div class="form  text-center align-content-center">
+    <h2>Add Student Details</h2>
+    {% if success %}
+      <p style="color: green;font-size:30px;padding:20px;border-style: dashed;border-color: green;border-width: 2px;background-color:#adc6a5;">
+          Student details saved successfully add another !
+      </p>
+    {% endif %}
+
+    <form action="{% url 'admin_app:add_students_details_view' %}" method="post">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+      <div class="small-div">
+        <span>Name</span>
+        {{ form.name.errors }}
+        {{ form.name}}
+      </div>
+      <div class="small-div">
+        <span>Email</span>
+        {{ form.email.errors }}
+        {{ form.email}}
+      </div>
+      <div class="small-div">
+        <span>Phone no.</span>
+        {{ form.phone_no.errors }}
+        {{ form.phone_no}}
+      </div>
+      <div class="small-div">
+        <span>Guide name</span>
+        {{ form.research_department_name.errors }}
+        {{ form.research_department_name}}
+      </div>
+      <div class="small-div">
+        <span>Guide email</span>
+        {{ form.research_department_email.errors }}
+        {{ form.research_department_email}}
+      </div>
+      <div class="small-div">
+        <span>Guide Phone</span>
+        {{ form.research_department_phone.errors }}
+        {{ form.research_department_phone}}
+      </div>
+      <div class="small-div">
+        <span>Faculty incharge name</span>
+        {{ form.faculty_incharge_name.errors }}
+        {{ form.faculty_incharge_name}}
+      </div>
+      <div class="small-div">
+        <span>Faculty incharge email</span>
+        {{ form.faculty_incharge_email.errors }}
+        {{ form.faculty_incharge_email}}
+      </div>
+      <div class="small-div">
+        <span>Faculty incharge Phone no.</span>
+        {{ form.faculty_incharge_phone.errors }}
+        {{ form.faculty_incharge_phone}}
+      </div>
+
+      <div class="small-div">
+        <span>Research area</span>
+        {{ form.research_area.errors }}
+        {{ form.research_area}}
+      </div>
+
+      <div class="small-div">
+        <span>Date of tenure completion</span>
+        {{ form.date_of_tenure_completion.errors }}
+        {{ form.date_of_tenure_completion}}
+      </div>
+      <div class="small-div">
+        <span>keywords</span>
+        {{ form.keywords.errors }}
+        {{ form.keywords}}
+      </div>
+
+      <!-- Trigger/Open The Modal -->
+      <input type="Submit" id="myBtn" class="btn1 btn_add" value="Add Student">
+    </form>
+    <!-- The Modal -->
+       <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Your query is submitted successfully and related document will be sent to the students email.</p>
+      </div>
+
+      </div>
+
+
+
+
+
+
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+modal.style.display = "none";
+}
+}
+</script>
+<script  src="{%static 'js/index.js' %}"></script>
+
+</body>
+</html>

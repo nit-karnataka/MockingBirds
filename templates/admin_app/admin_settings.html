@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel="stylesheet" href="{%static 'css/admin_settings.css' %}">
+  </head>
+  <body>
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6   col-div text-center">
+      <a href="{% url 'admin_app:admin_dashboard_view' %}" class="btn1 btn_admin">Admin Dashboard</a>
+    </div>
+<div class="form">
+    <form action="{% url 'admin_app:admin_settings_view' %}" method="post">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+
+      <div class="small-div ">
+        <span>and_or_search</span>
+        {{ form.and_or_search.errors }}
+        {{ form.and_or_search}}
+      </div>
+      <div class="small-div ">frequency
+        <span>frequency</span>
+        {{ form.frequency.errors }}
+        {{ form.frequency}}
+      </div>
+
+
+      <input type="submit" class="submit btn1 btn_add" value="Update Settings">
+    </form>
+
+  </div>
+  </body>
+</html>

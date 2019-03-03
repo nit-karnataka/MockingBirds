@@ -1,0 +1,67 @@
+.form{
+  font-size: 25px;
+  background-color: #d9dbe0;
+  margin-left: 340px;
+  border-radius: 5px;
+  margin-top: 100px;
+  width:400px;
+  height:100px;
+  padding: 20px;
+  padding-top: 100px;
+  padding-left: 90px;
+  box-shadow: 3px 3px 3px 3px #b5b7bc;
+}
+#id_email{
+  padding: 4px;
+  font-size: 21px;
+  width:260px;
+  height: 25px;
+  border-radius: 5px;
+}
+.btn1{
+  margin-top: 70px;
+  text-align: center;
+  border: 2px solid #288AE9;
+  border-radius: 25px;
+  color: #288AE9;
+  font-size: 20px;
+  cursor: pointer;
+  border-color: #288AE9;
+  padding-left: 15px;
+  padding-right:15px;
+  padding-top:2px;
+  padding-bottom: 2px;
+  box-shadow: -10px -10px -10px -10px #b5b7bc;
+}
+.btn1:hover{
+  color:white;
+  border: 2px solid #288AE9;
+  background-color: #288AE9;
+  radius:10px;
+  box-shadow: 2px 2px 2px 2px #b5b7bc;
+}
+.btn_admin{
+  position: fixed;
+  top: 15px;
+  right: 20px;
+
+}
+.btn_add{
+  margin-left: 650px;
+  margin-top: -400px;
+}
+a:link {
+  text-decoration: none !important;
+}
+
+a:visited {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+a:active {
+  text-decoration: none !important;
+}

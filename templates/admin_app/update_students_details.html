@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Update student details</title>
+
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel="stylesheet" href="{%static 'css/update_students_details.css' %}">
+
+</head>
+<body>
+
+
+  <div class="form  text-center">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6   col-div text-center">
+      <a href="{% url 'admin_app:admin_dashboard_view' %}" class="btn1 btn_admin">Admin Dashboard</a>
+    </div>
+    <h2>Update Student Details</h2>
+    {% if success %}
+      <p style="color: green;font-size:30px;padding:20px;border-style: dashed;border-color: green;border-width: 2px;background-color:#adc6a5;">
+          Student details updated successfully update another !
+      </p>
+    {% endif %}
+
+    <form action="{% url 'admin_app:update_students_details_view' %}" method="post">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+      <div class="small-div">
+        <span>Name</span>
+        {{ form.name.errors }}
+        {{ form.name}}
+      </div>
+      <div class="small-div">
+        <span>Email</span>
+        {{ form.email.errors }}
+        {{ form.email}}
+      </div>
+      <div class="small-div">
+        <span>Phone no.</span>
+        {{ form.phone_no.errors }}
+        {{ form.phone_no}}
+      </div>
+      <div class="small-div">
+        <span>Guide Name</span>
+        {{ form.research_department_name.errors }}
+        {{ form.research_department_name}}
+      </div>
+      <div class="small-div">
+        <span>Guide email</span>
+        {{ form.research_department_email.errors }}
+        {{ form.research_department_email}}
+      </div>
+
+      <div class="small-div">
+        <span>Guide Phone No.</span>
+        {{ form.research_department_phone.errors }}
+        {{ form.research_department_phone}}
+      </div>
+      <div class="small-div">
+        <span>Faculty incharge Name</span>
+        {{ form.faculty_incharge_name.errors }}
+        {{ form.faculty_incharge_name}}
+      </div>
+      <div class="small-div">
+        <span>Faculty incharge email</span>
+        {{ form.faculty_incharge_email.errors }}
+        {{ form.faculty_incharge_email}}
+      </div>
+      <div class="small-div">
+        <span>Faculty incharge Phone No.</span>
+        {{ form.faculty_incharge_phone.errors }}
+        {{ form.faculty_incharge_phone}}
+      </div>
+
+      <div class="small-div">
+        <span>Research area</span>
+        {{ form.research_area.errors }}
+        {{ form.research_area}}
+      </div>
+
+      <div class="small-div">
+        <span>Date of tenure completion</span>
+        {{ form.date_of_tenure_completion.errors }}
+        {{ form.date_of_tenure_completion}}
+      </div>
+      <div class="small-div">
+        <span>keywords</span>
+        {{ form.keywords.errors }}
+        {{ form.keywords}}
+      </div>
+
+      <input type="submit" class="submit btn1 btn_add" value="Update Student details">
+    </form>
+
+
+</div>
+
+
+<script  src="{%static 'js/index.js' %}"></script>
+
+</body>
+</html>

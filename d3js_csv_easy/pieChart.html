@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="./build/nv.d3.css" rel="stylesheet" type="text/css">
+        <script src="./build/d3.min.js" charset="utf-8"></script>
+        <script src="./build/nv.d3.js"></script>
+        <style>
+            text {
+            font: 12px sans-serif;
+            }
+            svg {
+            display: block;
+            }
+            html, body, svg {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            width: 100%;
+            }
+        </style>
+    </head>
+    <body class='with-3d-shadow with-transitions'>
+        <svg id="chart1"></svg>
+        <script>
+            // Regular pie chart example
+            var d3, fill_tags_array, nv;
+            nv.addGraph(function () {
+                var chart = nv.models.pieChart()
+                    .x(function (d) { return d.label; })
+                    .y(function (d) { return d.value; })
+                    .showLabels(true);
+            
+                chart.legend.vers("furious");
+            
+                // CSV Import
+                d3.csv("./db/output.csv", function (csv_input) {
+            
+                    // Extraction of CSV columns title
+                    var csv_col_title = Object.keys(csv_input[0]), tags_array = [];
+            
+                    // Create a tag_array with CSV informations
+                    fill_tags_array = csv_input.map(function (csv_input_line) {
+                        for (var col_title of csv_col_title) {
+                            tags_array.push({"label": col_title, "value": csv_input_line[col_title]});
+                        }
+                    });
+            
+                    d3.select("#chart1")
+                        .datum(tags_array)
+                        .transition().duration(350)
+                        .call(chart);
+            
+                    return chart;
+                });
+            });
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,196 @@
+.form{
+  font-size: 25px;
+  background-color: #d9dbe0;
+  margin-left: 340px;
+  border-radius: 5px;
+  width:800px;
+  height:770px;
+  padding: 20px;
+  box-shadow: 3px 3px 3px 3px #b5b7bc;
+}
+
+
+.btn1{
+  text-align: center;
+  border: 2px solid #288AE9;
+  border-radius: 25px;
+  color: #288AE9;
+  font-size: 20px;
+  cursor: pointer;
+  border-color: #288AE9;
+  padding-left: 15px;
+  padding-right:15px;
+  padding-top:2px;
+  padding-bottom: 2px;
+  box-shadow: -10px -10px -10px -10px #b5b7bc;
+}
+.btn1:hover{
+  color:white;
+  border: 2px solid #288AE9;
+  background-color: #288AE9;
+  radius:10px;
+  box-shadow: 2px 2px 2px 2px #b5b7bc;
+}
+.btn_admin{
+  position: fixed;
+  top: 15px;
+  right: 20px;
+
+}
+.btn_add{
+  margin-left: 310px;
+
+}
+.modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #adc6a5;
+    color:green;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a:link {
+    text-decoration: none !important;
+  }
+
+  a:visited {
+    text-decoration: none !important;
+  }
+
+  a:hover {
+    text-decoration: none !important;
+  }
+
+  a:active {
+    text-decoration: none !important;
+  }
+  #id_keywords{
+    padding: 4px;
+    font-size: 21px;
+    margin-left: 40px;
+    width:600px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  #id_email{
+    padding: 4px;
+    font-size: 21px;
+    margin-left: 245px;
+    width:250px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  #id_name{
+    padding: 4px;
+    font-size: 21px;
+    margin-left: 245px;
+    width:250px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  #id_phone_no{
+    padding: 4px;
+    font-size: 21px;
+    margin-left: 205px;
+    width:250px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  #id_research_department_name{
+    padding: 4px;
+    font-size: 21px;
+    margin-left: 185px;
+    width:250px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  #id_research_department_email{
+    padding: 4px;
+    font-size: 21px;
+    margin-left: 185px;
+    width:250px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  #id_research_department_phone{
+    padding: 4px;
+    font-size: 21px;
+    margin-left: 180px;
+    width:250px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  #id_faculty_incharge_name{
+    padding: 4px;
+    font-size: 21px;
+    margin-left: 80px;
+    width:250px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  #id_faculty_incharge_phone{
+    padding: 4px;
+    font-size: 21px;
+    margin-left: 40px;
+    width:250px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  #id_faculty_incharge_email{
+    padding: 4px;
+    font-size: 21px;
+    margin-left: 80px;
+    width:250px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  #id_research_area{
+    padding: 4px;
+    font-size: 21px;
+    margin-left: 172px;
+    width:250px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  #id_date_of_tenure_completion{
+    padding: 4px;
+    font-size: 21px;
+    margin-left: 52px;
+    width:250px;
+    height: 25px;
+    border-radius: 5px;
+  }
+.small-div{
+  margin: 15px;
+}

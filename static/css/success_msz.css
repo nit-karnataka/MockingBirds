@@ -1,0 +1,26 @@
+.msz{
+  margin-top: 30px;
+  color: green;
+  font-size:30px;
+  padding:20px;
+  border-style: dashed;
+  border-color: green;
+  border-width: 2px;
+  background-color:#adc6a5;
+
+}
+a:link {
+  text-decoration: none !important;
+}
+
+a:visited {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+a:active {
+  text-decoration: none !important;
+}

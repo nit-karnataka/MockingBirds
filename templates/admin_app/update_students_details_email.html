@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Add student details</title>
+
+
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="{%static 'css/update_students_details_email.css' %}">
+  </head>
+  <body>
+
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6   col-div text-center">
+      <a href="{% url 'admin_app:admin_dashboard_view' %}" class="btn1 btn_admin">Admin Dashboard</a>
+    </div>
+    <form action="{% url 'admin_app:update_students_details_email_view' %}" method="post">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+
+      <div class="form">
+        <span>Email</span>
+        {{ form.email.errors }}
+        {{ form.email}}
+      </div>
+
+
+      <input type="submit" class="submit btn1 btn_add" value="Submit email">
+    </form>
+
+
+  </body>
+</html>
